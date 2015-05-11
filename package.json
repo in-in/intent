@@ -27,6 +27,7 @@
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.5.0",
     "grunt-uncss": "^0.4.2",
+    "normalize-libsass": "^1.0.2",
     "time-grunt": "^1.2.0"
   }
 }

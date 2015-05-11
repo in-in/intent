@@ -1,0 +1,24 @@
+@import 'normalize';
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+@import 'utilities';
+
+
+html {
+  background-color: mintcream;
+}
+
+body {
+  color: #fff;
+
+  font-size: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,6 +1,22 @@
+include svg-def
+
 header
-    h1 Title
-    ul
-        li item
-        li item
-        li item
+    .header-top
+        .container
+            .row.middle-xs
+                .col-xs-offset-10.col-xs-2
+                    // SOCIAL-ICONS
+                    include social-icons
+                    // SOCIAL-ICONS ends
+    .header-bottom
+        .container
+            .row.middle-xs
+                .col-xs-2
+                    // LOGO
+                    include logo
+                    // LOGO ends
+                .col-xs-offset-6.col-xs-4
+                    // MENU
+                    include menu
+                    // MENU ends
+//note: проверить sgv в IE

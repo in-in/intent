@@ -1,0 +1,19 @@
+.social-icons {
+  padding: 0;
+}
+
+.social-icons a {
+  display: block;
+
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 1.125em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .icon:hover {
+    fill: $red;
+  }
+}

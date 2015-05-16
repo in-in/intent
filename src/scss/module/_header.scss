@@ -1,4 +1,13 @@
-header {
-  color: red;
-  background-color: green;
+.header-top {
+  width: 100%;
+  height: em(47);
+
+  @extend %noise-black;
+}
+
+.header-bottom {
+  width: 100%;
+  height: em(56);
+
+  @extend %noise-white;
 }

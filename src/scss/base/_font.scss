@@ -1,0 +1,44 @@
+/* ========================================================================== */
+/*                                                                            */
+/*                             FONT
+/* ========================================================================== */
+
+
+//Helvetica Neue Bold --> LiberationSans-Bold
+//Helvetica Neue Medium --> LiberationSans-Bold
+//Helvetica Neue Regular --> LiberationSans-Regular
+
+//Bitter
+//Bitter Bold
+
+@font-face {
+  font-family: 'Bitter Bold';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../font/bitter-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bitter Regular';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../font/bitter-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Liberation Sans Bold';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../font/liberationsans-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Liberation Sans Regular';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../font/liberationsans-regular.woff') format('woff');
+}

@@ -1,0 +1,32 @@
+
+.logo {
+  font-family: Bitter Regular;
+  font-size: em(24);
+}
+
+.logo-square {
+  float: left;
+
+  box-sizing: border-box;
+  margin-right: .375em;
+  padding-right: em(8.667);
+  padding-left: em(8.667);
+
+  text-align: center;
+
+  color: #fff;
+  background-color: $red;
+}
+
+.logo-text {
+  text-align: left;
+
+  color: $black-text;
+
+  direction: rtl;
+  unicode-bidi: bidi-override; //horrible hack from stackoverflow
+
+  &::first-letter {
+    color: $red;
+  }
+}

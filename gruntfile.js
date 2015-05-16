@@ -22,6 +22,7 @@ module.exports = function (grunt) {
         options: {
           includePaths: [
             'node_modules/normalize-libsass/',
+            'node_modules/flexboxgrid/dist/',
             'src/scss/',
             'src/scss/base/',
             'src/scss/layout/',
@@ -29,7 +30,6 @@ module.exports = function (grunt) {
             'src/scss/utilities/'
           ],
           outputStyle: 'nested',
-          imagePath: '../img'   //note: эта штука работает?
         },
         files: {
           "src/css/style.css": "src/scss/index.scss"
@@ -88,8 +88,8 @@ module.exports = function (grunt) {
       options: {
         plugins: [
           {removeViewBox: false},
-          {removeUselessStrokeAndFill: false},
-          {removeMetadata: true}
+          {removeUselessStrokeAndFill: true},
+          {removeMetadata: false}
         ]
       },
       dev: {
@@ -107,8 +107,9 @@ module.exports = function (grunt) {
     
     svgstore: {
       options: {
-        cleanup: true,
+        cleanup: ['fill','stroke'],
         cleanupdefs: true,
+        inheritviewbox: true,
         prefix: 'icon-',
         svg: {
           style: "display: none;"
@@ -116,7 +117,7 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          'src/img/svg-def.svg': ['src/img/svgmin/*.min.svg']
+          'src/jade/includes/svg-def.jade': ['src/img/svgmin/*.min.svg']
         }
       }
     },
@@ -161,6 +162,9 @@ module.exports = function (grunt) {
     clean: {
       build: {
         src: ["build"]
+      },
+      svg: {
+        src: ["src/img/svgmin"]
       }
     },
     
@@ -245,14 +249,21 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-uncss');
 
   grunt.registerTask('comb', ['newer:csscomb']);
-  grunt.registerTask('svg', ['newer:svgmin:dev', 'svgstore']);
+  
+  grunt.registerTask('svg', [
+    'clean:svg',
+    'svgmin',
+    'svgstore'
+  ]);
+  
   grunt.registerTask('build', [
-    'clean',
+    'clean:build',
     'copy',
     'cssmin',
     'htmlmin',
     'imagemin'
   ]);
+  
   grunt.registerTask('default', [
     'browserSync',
     'watch'

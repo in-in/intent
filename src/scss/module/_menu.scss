@@ -1,0 +1,22 @@
+.menu {
+  text-transform: uppercase;
+
+  font-family: Liberation Sans Bold;
+  font-size: em(12);
+
+  li {
+    margin-left: 2.333em;
+
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+
+    color: $black-text;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}

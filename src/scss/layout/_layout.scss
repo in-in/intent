@@ -1,3 +1,31 @@
-main {
-  width: 900px;
+/* ========================================================================== */
+/*                                                                            */
+/*                             LAYOUT
+/* ========================================================================== */
+
+//ширина макета: 960px
+
+
+@import 'flexboxgrid';
+
+.container {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: em(960);
+  height: 100%;
+  margin: 0 auto;
+  padding-right: em(10);
+  padding-left: em(10);
+
+  outline: 1px dashed red;
+}
+
+.row {
+  height: 100%;
+  margin: 0;
+}
+
+[class^='col-xs'] {
+  padding-right: 0;
+  padding-left: 0;
 }

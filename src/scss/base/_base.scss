@@ -1,3 +1,8 @@
+/* ========================================================================== */
+/*                                                                            */
+/*                             BASE
+/* ========================================================================== */
+
 @import 'normalize';
 
 ul,
@@ -8,17 +13,35 @@ ol {
 
 
 @import 'utilities';
+@import 'font';
 
 
 html {
-  background-color: mintcream;
+  background: #fbfbfb;
 }
 
 body {
-  color: #fff;
-
   font-size: 100%;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+
+  fill: #fff;
+}
+
+%noise-black {
+  background-color: #1c1c1c;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAcCAMAAAA6Aj1XAAAAY1BMVEUeISMeISQfISQfIiUgIiUgIyYhIyYhJCYhJCciJCciJSciJSgjJSgjJigjJikkJikkJykkJyolJyklJyolKColKCsmKComKCsmKSsmKSwnKSwnKiwnKi0oKi0oKy0oKy4pLC8EGRkIAAACL0lEQVQ4yyXUQWIcNxADQCbxOpRa6iVsIjPQwgb//0ofUo+okSw/7ZsJO0S/Q5f6l40FibMd16A8Gbkv6bRIPpjokU+xchqbBxmQtQHnP9BaAs48sVZIL8mvcjSq0G4yp2zqLUyq4Y82gTpSyh74QYlFhXV4PGl325e3oHta0cogHla4LGZK4r9P07coFkw1Ac3haLqdYnQKbT9KcQnklIx23CM5fPBJLhlepnvbxl+U8gZJN6WxI2sm3sVPoptIWeCkjwsV3vC4bptqO5q61BsNtEW9kWQnUnM40wxXFv3YYs8X+/6+Y6yQmr8p9uAHtxpa/vxiv5SUu7HwU69tHC5CryGxe9sqiL0tcYXEQ8dehLgOMNoWyoY6Pl2vstp8ajnxYhs7HOptqw+IDVPfm7o6h5mKuc1katDtZup4s2HnaQolhYVuLvuZHpQmf5JF+NzOubbhLH9Ri0kakcZXa3fLaSGr9XK2226afIA++5ZHU0kT9MPGWjLSDvX+nP/goy1+C0dW8kvz00BRQUm/scWnH/577EWZpaE1+26UZVXMftDkG2iVr0/dRzk9qG/vBrEMeCHSMsmdNpZwpwVxxLzbeHk7Vumi37/oTLCx07gavEZJ1mKs6SjT6c9J40ybqgK0miMl4J4+SrXI5htOvwRVLJRAdYaeC4QWSD6A6geFa66mW+BzCbjvoeNuo1cQ/pCQ+tXc7STryOgVPYcvYhHEe9quw7ja09UU2v8v4D+Xnlk51ZPoUAAAAABJRU5ErkJggg==);
+  background-repeat: repeat;
+}
+
+%noise-white {
+  background-color: #fff;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAACVBMVEX7+/v8/Pz9/f2vnu5LAAAAeUlEQVR4AS2OQQ4AIAzC2v7/0Sa4eVkGBQGEgExQ9jSU/g4C7vqXRCGB2TLNAYOmeYbNR7iAFJ1W8MGb+PQlC9enxcBxdt860YOuS9PE42DwTlcxhEs4fEIgiHC2jMGL5XqZ34Z/CDo8avi3LfeYHbug7Xhy9COb5QHuvAEvVCMMTgAAAABJRU5ErkJggg==);
+  background-repeat: repeat;
 }

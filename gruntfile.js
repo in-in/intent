@@ -11,6 +11,10 @@ module.exports = function (grunt) {
         files: "src/jade/**/*.jade",
         tasks: ['jade']
       },
+      js: {
+        files: 'src/js/*.js',
+        tasks: ['jade']
+      },
       svg: {
         files: 'src/img/svg/*.svg',
         tasks: ['newer:svgmin', 'svgstore']

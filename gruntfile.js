@@ -1,32 +1,16 @@
 module.exports = function (grunt) {
   'use strict';
   require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt);
+  
   grunt.initConfig({
-    watch: {
-      sass: {
-        files: "src/scss/**/*.scss",
-        tasks: ['sass:dev', 'autoprefixer']
-      },
-      jade: {
-        files: "src/jade/**/*.jade",
-        tasks: ['jade']
-      },
-      js: {
-        files: 'src/js/*.js',
-        tasks: ['jade']
-      },
-      svg: {
-        files: 'src/img/svg/*.svg',
-        tasks: ['newer:svgmin', 'svgstore']
-      }
-    },
-    
     sass: {
       dev: {
         options: {
           includePaths: [
             'node_modules/normalize-libsass/',
             'node_modules/flexboxgrid/dist/',
+            'node_modules/slick-carousel/slick',
             'src/scss/',
             'src/scss/base/',
             'src/scss/layout/',
@@ -60,6 +44,20 @@ module.exports = function (grunt) {
         files: {
           "src/index.html": "src/jade/*.jade"
         }
+      }
+    },
+    
+    concat: {
+      dev: {
+        options: {
+          separator: ';\n',
+        },
+        src: [
+          'node_modules/jquery/dist/jquery.js',
+          'node_modules/slick-carousel/slick/slick.js',
+          'src/js/index.js'
+        ],
+        dest: 'src/js/main.js'
       }
     },
     
@@ -160,6 +158,27 @@ module.exports = function (grunt) {
       }
     },
 
+//WATCH
+    
+    watch: {
+      sass: {
+        files: "src/scss/**/*.scss",
+        tasks: ['sass:dev', 'autoprefixer']
+      },
+      jade: {
+        files: "src/jade/**/*.jade",
+        tasks: ['jade']
+      },
+      js: {
+        files: 'src/js/index.js',
+        tasks: ['concat', 'jade']
+      },
+      svg: {
+        files: 'src/img/svg/*.svg',
+        tasks: ['newer:svgmin', 'svgstore']
+      }
+    },
+
 // BUILD TASKS
 
 
@@ -180,6 +199,7 @@ module.exports = function (grunt) {
             cwd: 'src/',
             src: [
               '**',
+              '!**/index.js',
               '!**/scss/**',
               '!**/jade/**',
               '!**/svg*/**', //note: работает как я думал
@@ -214,6 +234,12 @@ module.exports = function (grunt) {
       }
     },
     
+    uglify: {
+      build: {
+        files: {'build/js/main.js': 'build/js/main.js'}
+      }
+    },
+    
     imagemin: {
       dynamic: {
         files: [{
@@ -234,23 +260,7 @@ module.exports = function (grunt) {
       src: ['**']
     }
   });
-  
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-csscomb');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-svgstore');
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.loadNpmTasks('grunt-uncss');
+
 
   grunt.registerTask('comb', ['newer:csscomb']);
   
@@ -265,6 +275,7 @@ module.exports = function (grunt) {
     'copy',
     'cssmin',
     'htmlmin',
+    'uglify',
     'imagemin'
   ]);
   

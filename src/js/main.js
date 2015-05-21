@@ -11585,7 +11585,10 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     arrows: true,
-    asNavFor: '.thumbnails'
+    appendArrows: $('.slider-arrows'),
+    asNavFor: '.thumbnails',
+    prevArrow: '<svg class="icon-arrow"><use xlink:href="#icon-arrow-left"></use></svg>',
+    nextArrow: '<svg class="icon-arrow" ><use xlink:href="#icon-arrow-right"></use></svg>'
   });
   $('.thumbnails').slick({
     slidesToShow: 10,

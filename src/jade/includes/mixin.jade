@@ -2,3 +2,22 @@ mixin list(items)
     ul&attributes(attributes)
         each item in items
             li: a(href="") #{item}
+
+
+
+mixin slide(path,text1,text2,text3)
+    .slide
+        img(data-lazy='img/pic/'+path, alt="slide")
+        .slide-wrap
+            .container
+                .row
+                    .col-xs-5
+                        p.slide-text
+                            span=text1
+                        p.slide-text
+                            span=text2
+                        p.slide-text
+                            span=text3
+//                .row
+//                    .col-xs-1
+//                        .slider-arrows

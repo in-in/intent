@@ -1,0 +1,36 @@
+.thumbnails {
+  display: flex;
+
+  width: auto;
+  height: em(130);
+  margin-top: em(-28);
+  padding-right: em(27);
+  padding-left: em(27);
+
+  align-items: center;
+  @extend %noise-black;
+}
+
+.thumbnail {
+  float: left;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  min-width: em(75);
+  height: em(75);
+  margin-right: em(15);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    display: block;
+
+    max-width: auto;
+  }
+
+  &.slick-active {
+    border: 2px solid $red;
+  }
+}

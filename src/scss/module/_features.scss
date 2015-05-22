@@ -1,0 +1,37 @@
+.features-block {
+  margin-top: em(48);
+  padding-right: em(22);
+  padding-left: em(22);
+}
+
+.features-icon {
+  display: block;
+  float: left;
+
+  box-sizing: border-box;
+  width: em(30);
+  height: em(30);
+  margin-right: 1em;
+  padding-top: em(7);
+  padding-bottom: em(7);
+
+  background-color: #25282a;
+}
+
+.features-block h4 {
+  margin: 0;
+
+  color: $black-text;
+
+  font-family: Bitter Regular;
+  font-size: em(18);
+  line-height: 1.667em;
+}
+
+p.features-text {
+  color: #5c5c5c;
+
+  font-family: Liberation Sans Regular;
+  font-size: .875em;
+  line-height: 1.143em;
+}

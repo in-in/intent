@@ -417,6 +417,10 @@ body {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAACVBMVEX7+/v8/Pz9/f2vnu5LAAAAeUlEQVR4AS2OQQ4AIAzC2v7/0Sa4eVkGBQGEgExQ9jSU/g4C7vqXRCGB2TLNAYOmeYbNR7iAFJ1W8MGb+PQlC9enxcBxdt860YOuS9PE42DwTlcxhEs4fEIgiHC2jMGL5XqZ34Z/CDo8avi3LfeYHbug7Xhy9COb5QHuvAEvVCMMTgAAAABJRU5ErkJggg==);
   background-repeat: repeat; }
 
+.features, .tagline {
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf; }
+
 /* ========================================================================== */
 /*                                                                            */
 /*                             LAYOUT
@@ -1342,6 +1346,9 @@ h2.slide-text {
   .thumbnail.slick-active {
     border: 2px solid #ea5a4b; }
 
+.features {
+  background-color: #fff; }
+
 .features-block {
   margin-top: 3em;
   padding-right: 1.375em;
@@ -1370,3 +1377,18 @@ p.features-text {
   font-family: Liberation Sans Regular;
   font-size: .875em;
   line-height: 1.143em; }
+
+.tagline {
+  padding-top: 1em; }
+  .tagline-text {
+    color: #252525;
+    font-family: Bitter Regular;
+    font-size: 18px;
+    font-weight: 400; }
+  .tagline-mark {
+    padding-top: 0.375em;
+    padding-right: 0.8125em;
+    padding-bottom: 0.375em;
+    padding-left: 0.8125em;
+    color: #fff;
+    background-color: #ea5a4b; }

@@ -1,0 +1,23 @@
+.tagline {
+  padding-top: 1em;
+
+  @extend %main-border;
+
+  &-text {
+    color: $black-text;
+
+    font-family: Bitter Regular;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &-mark {
+    padding-top: em(6);
+    padding-right: em(13);
+    padding-bottom: em(6);
+    padding-left: em(13);
+
+    color: #fff;
+    background-color: $red;
+  }
+}

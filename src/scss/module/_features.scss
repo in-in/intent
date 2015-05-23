@@ -1,3 +1,9 @@
+.features {
+  background-color: #fff;
+
+  @extend %main-border;
+}
+
 .features-block {
   margin-top: em(48);
   padding-right: em(22);

@@ -45,3 +45,8 @@ body {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAACVBMVEX7+/v8/Pz9/f2vnu5LAAAAeUlEQVR4AS2OQQ4AIAzC2v7/0Sa4eVkGBQGEgExQ9jSU/g4C7vqXRCGB2TLNAYOmeYbNR7iAFJ1W8MGb+PQlC9enxcBxdt860YOuS9PE42DwTlcxhEs4fEIgiHC2jMGL5XqZ34Z/CDo8avi3LfeYHbug7Xhy9COb5QHuvAEvVCMMTgAAAABJRU5ErkJggg==);
   background-repeat: repeat;
 }
+
+%main-border {
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+}

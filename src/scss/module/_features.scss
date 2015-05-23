@@ -1,13 +1,15 @@
 .features {
+  padding-right: em(25);
+  padding-left: em(25);
+
   background-color: #fff;
 
   @extend %main-border;
 }
 
 .features-block {
+  width: em(265);
   margin-top: em(48);
-  padding-right: em(22);
-  padding-left: em(22);
 }
 
 .features-icon {

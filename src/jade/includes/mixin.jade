@@ -22,7 +22,6 @@ mixin slide(path,text1,text2,text3)
                             
                             
 mixin workthubm(path,title)
-    .col-xs-3
-        .work-thumb
-            p.work-thumb_title=title
-            img(src="img/"+path, alt="work-thumb")
+    .work-thumb
+        a(href="#").work-thumb_title=title
+//        img(src="img/"+path, alt="work-thumb")

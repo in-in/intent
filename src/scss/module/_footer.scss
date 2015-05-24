@@ -1,1 +1,6 @@
 
+footer {
+  height: 4em;
+
+  @extend %noise-black;
+}

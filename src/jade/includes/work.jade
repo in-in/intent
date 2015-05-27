@@ -2,22 +2,22 @@
     section.work
         header
             ul.row.filter
-                li.filter-item.active
-                    a(href="#") All
                 li.filter-item
-                    a(href="#") Print
+                    a(href="#" class="filter-button is-active" data-filter="*") All
                 li.filter-item
-                    a(href="#") Photography
+                    a(href="#" class="filter-button" data-filter=".print") Print
                 li.filter-item
-                    a(href="#") Web
+                    a(href="#" class="filter-button" data-filter=".photography") Photography
                 li.filter-item
-                    a(href="#") Animation
-        .row.between-xs
-            +workthubm('gallery1.jpg', 'Business Cards')
-            +workthubm('gallery2.jpg', 'Flowers')
-            +workthubm('gallery3.jpg', 'Obnimashki')
-            +workthubm('gallery4.jpg', 'Religion Styling')
-            +workthubm('gallery5.jpg', 'Jewelry Design')
-            +workthubm('gallery6.jpg', 'Bodyguard service')
-            +workthubm('gallery7.jpg', 'Safety Match')
-            +workthubm('gallery8.jpg', 'Wedding Photo')
+                    a(href="#" class="filter-button" data-filter=".web") Web
+                li.filter-item
+                    a(href="#" class="filter-button" data-filter=".animation") Animation
+        .row.work-gallery
+            +workthubm('gallery1.jpg', 'Business Cards')(class="print web")
+            +workthubm('gallery2.jpg', 'Flowers', 'print')(class="web animation")
+            +workthubm('gallery3.jpg', 'Obnimashki')(class="photography animation")
+            +workthubm('gallery4.jpg', 'Religion Styling')(class="print animation")
+            +workthubm('gallery5.jpg', 'Jewelry Design')(class="animation")
+            +workthubm('gallery6.jpg', 'Bodyguard service')(class="photography")
+            +workthubm('gallery7.jpg', 'Safety Match')(class="print web")
+            +workthubm('gallery8.jpg', 'Wedding Photo')(class="photography animation")

@@ -1376,7 +1376,7 @@ p.features-text {
     font-family: Bitter Regular;
     font-size: .875em; }
 
-.filter-item.active a {
+a.is-active {
   padding-top: 0.375em;
   padding-right: 0.8125em;
   padding-bottom: 0.375em;
@@ -1386,14 +1386,18 @@ p.features-text {
 
 .work-thumb {
   overflow: hidden;
+  box-sizing: border-box;
   width: 12.875em;
   max-width: 206px;
   height: 7.5em;
   max-height: 120px;
+  margin-right: 0.9375em;
   margin-bottom: 1.25em;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }
+  .work-thumb:nth-child(4n) {
+    margin-right: 0; }
   .work-thumb:hover > .work-thumb_title {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }

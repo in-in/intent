@@ -22,4 +22,22 @@ $(document).ready(function () {
     arrows: false,
     focusOnSelect: true
   });
+  
+  var $container = $('.work-gallery').isotope({
+    itemSelector: '.work-thumb'
+  });
+  
+  $('.filter').on('click', '.filter-button', function () {
+    event.preventDefault();
+    var filterValue = $(this).attr('data-filter');
+    $container.isotope({ filter: filterValue });
+  });
+  
+  $('.filter').each(function (i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', '.filter-button', function () {
+      $buttonGroup.find('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+    });
+  });
 });

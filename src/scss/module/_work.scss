@@ -35,7 +35,7 @@
   }
 }
 
-.filter-item.active a {
+a.is-active {
   padding-top: em(6);
   padding-right: em(13);
   padding-bottom: em(6);
@@ -48,15 +48,21 @@
 .work-thumb {
   overflow: hidden;
 
+  box-sizing: border-box;
   width: em(206);
   max-width: 206px;
   height: em(120);
   max-height: 120px;
+  margin-right: em(15);
   margin-bottom: em(20);
 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 
   &:hover > .work-thumb_title {
     transform: translate(0, 0);

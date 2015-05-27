@@ -55,7 +55,8 @@ module.exports = function (grunt) {
         src: [
           'node_modules/jquery/dist/jquery.js',
           'node_modules/slick-carousel/slick/slick.js',
-          'src/js/index.js'
+          'node_modules/isotope-layout/dist/isotope.pkgd.js',
+          'src/js/dev/*.js'
         ],
         dest: 'src/js/main.js'
       }
@@ -66,7 +67,8 @@ module.exports = function (grunt) {
         bsFiles: {
           src: [
             "src/css/*.css",
-            "src/*.html"
+            "src/*.html",
+            "src/js/dev/*.js"
           ]
         },
         options: {
@@ -170,7 +172,7 @@ module.exports = function (grunt) {
         tasks: ['jade']
       },
       js: {
-        files: 'src/js/index.js',
+        files: 'src/js/dev/index.js',
         tasks: ['concat', 'jade']
       },
       svg: {
@@ -199,7 +201,7 @@ module.exports = function (grunt) {
             cwd: 'src/',
             src: [
               '**',
-              '!**/index.js',
+              '!**/js/dev/**',
               '!**/scss/**',
               '!**/jade/**',
               '!**/svg*/**', //note: работает как я думал

@@ -30,6 +30,7 @@
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.5.0",
     "grunt-uncss": "^0.4.2",
+    "isotope-layout": "^2.2.0",
     "jquery": "^2.1.4",
     "load-grunt-tasks": "^3.1.0",
     "normalize-libsass": "^1.0.2",

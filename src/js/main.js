@@ -15817,7 +15817,7 @@ $(document).ready(function () {
   });
   
   $('.filter').on('click', '.filter-button', function () {
-    event.preventDefault();
+//    event.preventDefault();
     var filterValue = $(this).attr('data-filter');
     $container.isotope({ filter: filterValue });
   });

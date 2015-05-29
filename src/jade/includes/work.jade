@@ -1,17 +1,17 @@
 .container
     section.work
         header
-            ul.row.filter
+            ul.row.middle-xs.filter
                 li.filter-item
-                    a(href="#" class="filter-button is-active" data-filter="*") All
+                    button(class="filter-button is-active" data-filter="*") All
                 li.filter-item
-                    a(href="#" class="filter-button" data-filter=".print") Print
+                    button(class="filter-button" data-filter=".print") Print
                 li.filter-item
-                    a(href="#" class="filter-button" data-filter=".photography") Photography
+                    button(class="filter-button" data-filter=".photography") Photography
                 li.filter-item
-                    a(href="#" class="filter-button" data-filter=".web") Web
+                    button(class="filter-button" data-filter=".web") Web
                 li.filter-item
-                    a(href="#" class="filter-button" data-filter=".animation") Animation
+                    button(class="filter-button" data-filter=".animation") Animation
         .row.work-gallery
             +workthubm('gallery1.jpg', 'Business Cards')(class="print web")
             +workthubm('gallery2.jpg', 'Flowers', 'print')(class="web animation")

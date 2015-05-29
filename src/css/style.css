@@ -1085,8 +1085,7 @@ body {
   height: 100%;
   margin: 0 auto;
   padding-right: 0.625em;
-  padding-left: 0.625em;
-  outline: 1px dashed red; }
+  padding-left: 0.625em; }
 
 .row {
   height: 100%;
@@ -1359,8 +1358,8 @@ p.features-text {
   z-index: 5;
   margin-bottom: -1.875em;
   padding-top: 2.7em;
-  padding-right: 1.5625em;
-  padding-bottom: 0.3125em;
+  padding-right: 0.3125em;
+  padding-bottom: 0.625em;
   padding-left: 1.5625em;
   border-bottom: 1px solid #dfdfdf;
   background-color: #fff; }
@@ -1370,13 +1369,24 @@ p.features-text {
 .filter-item {
   margin-right: 1.25em;
   list-style: none; }
-  .filter-item a {
-    text-decoration: none;
-    color: #252525;
-    font-family: Bitter Regular;
-    font-size: .875em; }
 
-a.is-active {
+button.filter-button {
+  display: block;
+  box-sizing: content-box;
+  padding: 0;
+  text-align: initial;
+  text-indent: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: #252525;
+  border: 0;
+  outline: 0;
+  background: none;
+  font-family: Bitter Regular;
+  font-size: .875em;
+  text-rendering: inherit; }
+
+button.is-active {
   padding-top: 0.375em;
   padding-right: 0.8125em;
   padding-bottom: 0.375em;
@@ -1391,7 +1401,7 @@ a.is-active {
   max-width: 206px;
   height: 7.5em;
   max-height: 120px;
-  margin-right: 0.9375em;
+  margin-right: 1.3125em;
   margin-bottom: 1.25em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1442,4 +1452,52 @@ a.is-active {
   background-image: url(../img/gallery8.jpg); }
 
 footer {
-  height: 4em; }
+  padding-bottom: 2.5em; }
+
+.footer-col {
+  box-sizing: border-box;
+  width: 18.625em; }
+
+.footer-title {
+  margin-top: 5em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Liberation Sans Bold;
+  font-size: .875em; }
+
+.recent-list {
+  list-style: none; }
+
+.recent-list-item {
+  color: #adadad;
+  border-bottom: 1px solid #3b3b3b;
+  font-family: Bitter Bold;
+  font-size: .875em; }
+  .recent-list-item:last-child {
+    border-bottom: none; }
+  .recent-list-item p {
+    padding-right: 1em; }
+
+.about-text {
+  color: #adadad;
+  font-family: Liberation Sans Bold;
+  font-size: .87em; }
+
+.social-media-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  text-decoration: none; }
+
+.social-media-icons .social-media-icon:nth-child(8n) {
+  margin-right: 0; }
+
+.social-media-icon svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: transparent;
+  fill: gold; }

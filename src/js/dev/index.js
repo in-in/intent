@@ -11,8 +11,8 @@ $(document).ready(function () {
     fade: true,
     infinite: true,
     appendArrows: $('.slider-arrows'),
-    prevArrow: '<svg class="icon-arrow"><use xlink:href="#icon-arrow-left"></use></svg>',
-    nextArrow: '<svg class="icon-arrow" ><use xlink:href="#icon-arrow-right"></use></svg>'
+    prevArrow: '<svg class="icon-arrow"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>',
+    nextArrow: '<svg class="icon-arrow" ><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>'
   });
   $('.thumbnails').slick({
     asNavFor: '.slider',

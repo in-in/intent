@@ -116,12 +116,13 @@ module.exports = function (grunt) {
         inheritviewbox: true,
         prefix: 'icon-',
         svg: {
+          xmlns: 'http://www.w3.org/2000/svg',
           style: "display: none;"
         }
       },
       dev: {
         files: {
-          'src/jade/includes/svg-def.jade': ['src/img/svgmin/*.min.svg']
+          'src/img/sprite.svg': ['src/img/svgmin/*.min.svg']
         }
       }
     },

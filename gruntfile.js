@@ -112,7 +112,6 @@ module.exports = function (grunt) {
     svgstore: {
       options: {
         cleanup: ['fill','stroke'],
-        cleanupdefs: true,
         inheritviewbox: true,
         prefix: 'icon-',
         svg: {

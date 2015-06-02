@@ -1,7 +1,9 @@
 mixin list(items)
     ul&attributes(attributes)
         each item in items
-            li: a(href="") #{item}
+            li
+                - var linkatts = {'href': item.link}
+                a()&attributes(linkatts)= item.title
 
 
 

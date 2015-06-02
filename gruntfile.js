@@ -17,7 +17,7 @@ module.exports = function (grunt) {
             'src/scss/module/',
             'src/scss/utilities/'
           ],
-          outputStyle: 'nested',
+          outputStyle: 'nested'
         },
         files: {
           "src/css/style.css": "src/scss/index.scss"
@@ -41,16 +41,20 @@ module.exports = function (grunt) {
         options: {
           pretty: true
         },
-        files: {
-          "src/index.html": "src/jade/*.jade"
-        }
+        files: [{
+          expand: true,
+          cwd: 'src/jade/',
+          src: ['*.jade'],
+          dest: 'src/',
+          ext: '.html'
+        }]
       }
     },
     
     concat: {
       dev: {
         options: {
-          separator: ';\n',
+          separator: ';\n'
         },
         src: [
           'node_modules/jquery/dist/jquery.js',
@@ -66,18 +70,19 @@ module.exports = function (grunt) {
       default_options: {
         bsFiles: {
           src: [
-            "src/css/*.css",
             "src/*.html",
-            "src/js/dev/*.js"
+            "src/css/*.css",
+            "src/js/*.js"
           ]
         },
         options: {
           watchTask: true,
           port: 3008,
           notify: false,
-          injectChanges: true,
+          injectChanges: false,
           open: true,
           ui: false,
+          reloadDelay: 100,
           browser: "chromium-browser",
           server: {
             baseDir: "src"
@@ -111,7 +116,7 @@ module.exports = function (grunt) {
     
     svgstore: {
       options: {
-        cleanup: ['fill','stroke'],
+        cleanup: ['fill', 'stroke'],
         inheritviewbox: true,
         prefix: 'icon-',
         svg: {
@@ -173,7 +178,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: 'src/js/dev/index.js',
-        tasks: ['concat', 'jade']
+        tasks: ['concat']
       },
       svg: {
         files: 'src/img/svg/*.svg',
@@ -204,7 +209,7 @@ module.exports = function (grunt) {
               '!**/js/dev/**',
               '!**/scss/**',
               '!**/jade/**',
-              '!**/svg*/**', //note: работает как я думал
+              '!**/svg*/**' //note: работает как я думал
             ],
             dest: 'build/'
           }

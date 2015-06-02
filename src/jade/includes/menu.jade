@@ -1,2 +1,7 @@
 nav(role="navigation")
-    +list(menuItem).menu.row.end-xs
+    +list([
+        {'title': 'Home', 'link': 'index.html'},
+        {'title': 'Blog', 'link': 'blog.html'},
+        {'title': 'Portfolio', 'link': 'portfolio.html'},
+        {'title': 'Contact', 'link': 'contact.html'}
+    ]).menu.row.end-xs

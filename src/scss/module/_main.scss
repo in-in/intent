@@ -7,8 +7,8 @@
 main {
   width: 100%;
   height: 100%;
-
-  border-bottom: 8px solid $red;
+  margin-top: em(-28);
+  margin-bottom: em(-30);
 
   @extend %noise-white;
 }

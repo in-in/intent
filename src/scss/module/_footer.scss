@@ -2,6 +2,8 @@
 footer {
   padding-bottom: em(40);
 
+  border-top: em(8) solid $red;
+
   @extend %noise-black;
 }
 

@@ -50,3 +50,7 @@ body {
   border-right: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
 }
+
+%sidebar-border {
+  border-bottom: 5px solid $red;
+}

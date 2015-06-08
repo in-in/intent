@@ -1,0 +1,23 @@
+
+
+.post-title {
+  margin: 0;
+}
+
+.sidebar-title {
+  margin: 0;
+
+  @extend %sidebar-border;
+}
+
+.blog-post {
+  @extend %sidebar-border;
+}
+
+.adv-block {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+
+  outline: 1px dashed black;
+}

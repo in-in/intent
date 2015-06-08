@@ -1,9 +1,21 @@
 .inner-section {
   position: relative;
   z-index: 2;
+
+  padding-right: em(26);
+  padding-bottom: em(26);
+  padding-left: em(26);
+
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+
+  @extend %main-border;
 }
 
 .section-header {
+  position: relative;
+  z-index: 2;
+
   height: em(130);
 
   @extend %noise-black;

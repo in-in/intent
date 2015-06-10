@@ -421,7 +421,7 @@ body {
   border-right: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf; }
 
-.sidebar-title, .blog-post {
+.blog-post, .sidebar-title {
   border-bottom: 5px solid #ea5a4b; }
 
 /* ========================================================================== */
@@ -1174,9 +1174,7 @@ main {
 .inner-section {
   position: relative;
   z-index: 2;
-  padding-right: 1.625em;
-  padding-bottom: 1.625em;
-  padding-left: 1.625em;
+  padding: 1.5625em;
   border-bottom: 1px solid #dfdfdf;
   background-color: #fff; }
 
@@ -1492,16 +1490,133 @@ button.is-active {
   background-image: url(../img/gallery8.jpg); }
 
 .post-title {
+  margin: 0;
+  margin-bottom: 0.8125em;
+  color: #464646;
+  font-family: Bitter Regular;
+  font-size: 1.125em; }
+
+.post-content {
+  box-sizing: border-box;
+  margin-bottom: 1.875em; }
+
+.post-img,
+.post-video {
+  border: 1px solid #c7c7c7; }
+
+.post-audio {
+  width: 100%; }
+
+.blog-post {
+  box-sizing: border-box;
+  width: 40.625em;
+  margin-bottom: 1.5625em;
+  padding-bottom: 2.1875em; }
+  .blog-post:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none; }
+
+.post-info:not(:last-child) {
+  margin-bottom: 0.9375em; }
+
+.post-info-title,
+.post-info-prop {
   margin: 0; }
 
-.sidebar-title {
-  margin: 0; }
+.post-info-title {
+  margin-bottom: .5em;
+  color: #252525;
+  font-family: Bitter Regular;
+  font-size: 0.875em; }
+
+.post-info-prop {
+  text-decoration: none;
+  color: #ea5a4b;
+  font-family: Liberation Sans Regular;
+  font-size: 0.75em; }
+
+.post-text {
+  margin: 0;
+  margin-bottom: 1.786em;
+  color: #252525;
+  font-family: Liberation Sans Regular;
+  font-size: 0.875em; }
+  .post-text:last-child {
+    margin-bottom: 0; }
+
+.sidebar {
+  box-sizing: border-box;
+  width: 12.875em;
+  margin-bottom: 1.5625em; }
+  .sidebar:first-child {
+    margin-top: 35px; }
+
+.sidebar-block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: flex-end;
+          align-items: flex-end; }
 
 .adv-block {
+  display: -webkit-flex;
+  display: flex;
   box-sizing: border-box;
-  width: 100px;
-  height: 100px;
-  outline: 1px dashed black; }
+  width: 7.143em;
+  height: 7.143em;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em;
+  text-align: center;
+  color: #c6c6c6;
+  outline: 1px solid #c9c9c9;
+  background-color: #f5f5f5;
+  font-family: Bitter Regular;
+  font-size: 0.875em;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center; }
+  .adv-block:nth-child(2n) {
+    margin-right: 0; }
+  .adv-block:first-child {
+    outline: none; }
+  .adv-block img {
+    max-width: 100%; }
+
+.sidebar-categories-list {
+  list-style-type: none; }
+  .sidebar-categories-list a {
+    text-decoration: none;
+    color: #252525;
+    font-family: Liberation Sans Regular;
+    font-size: 0.875em; }
+
+.sidebar-title {
+  margin: 0;
+  margin-bottom: 1.375em;
+  color: #252525;
+  font-family: Bitter Regular;
+  font-size: 1em;
+  line-height: 1.8em; }
+
+.sidebar-about p {
+  margin: 0;
+  font-family: Liberation Sans Regular;
+  font-size: 0.875em; }
+
+.paginator a {
+  display: inline-block;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-decoration: none;
+  color: #2d2d2d;
+  font-family: Liberation Sans Bold;
+  font-size: 14px;
+  line-height: 28px; }
+  .paginator a.current {
+    color: #fff;
+    background-color: #ea5a4b; }
 
 footer {
   padding-bottom: 2.5em;

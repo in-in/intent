@@ -15813,11 +15813,14 @@ $(document).ready(function () {
   });
   
   var $container = $('.work-gallery').isotope({
-    itemSelector: '.work-thumb'
+    itemSelector: '.work-thumb',
+    layoutMode: 'fitRows',
+    fitRows: {
+      gutter: 21
+    }
   });
   
   $('.filter').on('click', '.filter-button', function () {
-//    event.preventDefault();
     var filterValue = $(this).attr('data-filter');
     $container.isotope({ filter: filterValue });
   });

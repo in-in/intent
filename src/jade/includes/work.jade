@@ -1,23 +1,23 @@
-.container
-    section.work
-        header
-            ul.row.middle-xs.filter
-                li.filter-item
-                    button(class="filter-button is-active" data-filter="*") All
-                li.filter-item
-                    button(class="filter-button" data-filter=".print") Print
-                li.filter-item
-                    button(class="filter-button" data-filter=".photography") Photography
-                li.filter-item
-                    button(class="filter-button" data-filter=".web") Web
-                li.filter-item
-                    button(class="filter-button" data-filter=".animation") Animation
-        .row.work-gallery
-            +workthubm('gallery1.jpg', 'Business Cards')(class="print web")
-            +workthubm('gallery2.jpg', 'Flowers', 'print')(class="web animation")
-            +workthubm('gallery3.jpg', 'Obnimashki')(class="photography animation")
-            +workthubm('gallery4.jpg', 'Religion Styling')(class="print animation")
-            +workthubm('gallery5.jpg', 'Jewelry Design')(class="animation")
-            +workthubm('gallery6.jpg', 'Bodyguard service')(class="photography")
-            +workthubm('gallery7.jpg', 'Safety Match')(class="print web")
-            +workthubm('gallery8.jpg', 'Wedding Photo')(class="photography animation")
+section.work
+    header
+        ul.row.middle-xs.filter
+            li.filter-item
+                button(class="filter-button is-active" data-filter="*") All
+            li.filter-item
+                button(class="filter-button" data-filter=".print") Print
+            li.filter-item
+                button(class="filter-button" data-filter=".photography") Photography
+            li.filter-item
+                button(class="filter-button" data-filter=".web") Web
+            li.filter-item
+                button(class="filter-button" data-filter=".animation") Animation
+    .row.work-gallery
+        block gallery
+            +workthubm('Business Cards')(class="print web")
+            +workthubm('Flowers')(class="web animation")
+            +workthubm('Obnimashki')(class="photography animation")
+            +workthubm('Religion Styling')(class="animation")
+            +workthubm('Jewelry Design')(class="animation")
+            +workthubm('Bodyguard service')(class="photography")
+            +workthubm('Safety Match')(class="print web")
+            +workthubm('Wedding Photo')(class="photography animation")

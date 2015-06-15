@@ -42,6 +42,11 @@ html(lang="en")
             // FOOTER ens
         block script
             //script
-            script(src="js/main.js")
+            if siteScript
+                script(src="js/main.js")
+            if mapScript
+                script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+            if mapInit
+                script(src="js/map.js")
             //script ends
         

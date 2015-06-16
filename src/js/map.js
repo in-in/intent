@@ -6,7 +6,9 @@ function initialize() {
 
   var mapOptions = {
     zoom: 14,
-    center: myLatlng
+    center: myLatlng,
+    disableDefaultUI: true
+
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);

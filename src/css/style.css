@@ -1642,6 +1642,20 @@ button.is-active {
   margin: 0;
   padding: 0; }
 
+a[href^='http://maps.google.com/maps'] {
+  display: none !important; }
+
+a[href^='https://maps.google.com/maps'] {
+  display: none !important; }
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none; }
+
+.gmnoprint div {
+  background: none !important; }
+
 footer {
   padding-bottom: 2.5em;
   border-top: 0.5em solid #ea5a4b; }

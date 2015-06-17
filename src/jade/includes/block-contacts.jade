@@ -1,0 +1,32 @@
+.row
+    .col-xs-3
+        p.msg
+            | Lorem ipsum dolor sit amet, in consectetur adipiscing elit. Siri Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+        .vcard
+            p.vcard-company
+                | Best PSD Freebies
+            p.vcard-adr
+                span.vcard-street
+                    | 328 Ave C
+                span.vcard-city
+                    | Saskatoon, SK
+                span.vcard-post
+                    | S7R 2V9
+            p.vcard-tel
+                | t: (888) 842 - 8356
+            p.vcard-tel
+                | f: (888) 452 - 9257
+            p.vcard-email
+                | e: 
+                a(href="mailto:info@psdfreebies.com") info@psdfreebies.com
+
+    .col-xs-9.end-xs
+        form(action="").contact-form
+            input(type="text" placeholder="First Name" maxlength="255")
+            input(type="text" placeholder="Last Name" maxlength="255")
+            input(type="email" placeholder="Email Address" maxlength="255")
+            input(type="url" placeholder="Url")
+            .contact-form-msg
+                textarea(placeholder="Message" maxlength="1000")
+            input(type="submit" placeholder="Submit")
+            

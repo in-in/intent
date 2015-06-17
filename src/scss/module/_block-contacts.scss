@@ -1,0 +1,104 @@
+.msg {
+  color: $black-text;
+
+  font-family: Liberation Sans Regular;
+  font-size: 14px;
+}
+
+.vcard {
+  color: $black-text;
+
+  font-family: Liberation Sans Regular;
+  font-size: 14px;
+}
+
+.vcard-company {
+  margin: 0;
+
+  color: $red;
+
+  font-family: Liberation Sans Bold;
+}
+
+.vcard-adr {
+  margin-top: 0;
+}
+
+.vcard-adr span {
+  display: block;
+}
+
+.vcard-tel,
+.vcard-email {
+  margin: 0;
+}
+
+.vcard-email a {
+  text-decoration: none;
+
+  color: $black-text;
+  &:hover {
+    border-bottom: 1px solid $black-text;
+  }
+}
+
+.contact-form {
+  box-sizing: border-box;
+}
+
+.contact-form input:not([type='submit']) {
+  box-sizing: border-box;
+  width: 288px;
+  height: 33px;
+  margin: 0;
+  margin-right: 16px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+
+  border: none;
+  outline: 1px solid black;
+}
+
+.contact-form input:nth-child(2n):not([type='submit']) {
+  margin-right: 0;
+
+  background-color: palegreen;
+}
+
+.contact-form input[type='submit'] {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  text-transform: uppercase;
+
+  color: #fff;
+  border: none;
+  background: none;
+  background-color: $red;
+}
+
+.contact-form textarea {
+  box-sizing: border-box;
+  width: 592px;
+  height: 204px;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+
+  resize: none;
+
+  border: none;
+  outline: 1px solid black;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $black-text;
+
+  font-family: Liberation Sans Bold;
+  font-size: 14px;
+}

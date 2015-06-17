@@ -1656,6 +1656,103 @@ a[href^='https://maps.google.com/maps'] {
 .gmnoprint div {
   background: none !important; }
 
+.msg {
+  color: #252525;
+  font-family: Liberation Sans Regular;
+  font-size: 14px; }
+
+.vcard {
+  color: #252525;
+  font-family: Liberation Sans Regular;
+  font-size: 14px; }
+
+.vcard-company {
+  margin: 0;
+  color: #ea5a4b;
+  font-family: Liberation Sans Bold; }
+
+.vcard-adr {
+  margin-top: 0; }
+
+.vcard-adr span {
+  display: block; }
+
+.vcard-tel,
+.vcard-email {
+  margin: 0; }
+
+.vcard-email a {
+  text-decoration: none;
+  color: #252525; }
+  .vcard-email a:hover {
+    border-bottom: 1px solid #252525; }
+
+.contact-form {
+  box-sizing: border-box; }
+
+.contact-form input:not([type='submit']) {
+  box-sizing: border-box;
+  width: 288px;
+  height: 33px;
+  margin: 0;
+  margin-right: 16px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border: none;
+  outline: 1px solid black; }
+
+.contact-form input:nth-child(2n):not([type='submit']) {
+  margin-right: 0;
+  background-color: palegreen; }
+
+.contact-form input[type='submit'] {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  background: none;
+  background-color: #ea5a4b; }
+
+.contact-form textarea {
+  box-sizing: border-box;
+  width: 592px;
+  height: 204px;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  resize: none;
+  border: none;
+  outline: 1px solid black; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #252525;
+  font-family: Liberation Sans Bold;
+  font-size: 14px; }
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #252525;
+  font-family: Liberation Sans Bold;
+  font-size: 14px; }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #252525;
+  font-family: Liberation Sans Bold;
+  font-size: 14px; }
+
+input::placeholder,
+textarea::placeholder {
+  color: #252525;
+  font-family: Liberation Sans Bold;
+  font-size: 14px; }
+
 footer {
   padding-bottom: 2.5em;
   border-top: 0.5em solid #ea5a4b; }

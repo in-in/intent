@@ -1716,7 +1716,7 @@ a[href^='https://maps.google.com/maps'] {
 .contact-form input:nth-child(2n):not([type='submit']) {
   margin-right: 0; }
 
-.contact-form input[type='submit'] {
+.contact-form button[type='submit'] {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1733,9 +1733,9 @@ a[href^='https://maps.google.com/maps'] {
   background-color: #ea5a4b;
   font-family: Liberation Sans Bold;
   font-size: 0.75em; }
-  .contact-form input[type='submit']:hover {
+  .contact-form button[type='submit']:hover {
     background-color: #e74534; }
-  .contact-form input[type='submit']:active {
+  .contact-form button[type='submit']:active {
     background-color: #e63926; }
 
 .contact-form textarea {
@@ -1758,24 +1758,28 @@ a[href^='https://maps.google.com/maps'] {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #252525;
+  opacity: 1;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #252525;
+  opacity: 1;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #252525;
+  opacity: 1;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 
 input::placeholder,
 textarea::placeholder {
   color: #252525;
+  opacity: 1;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 

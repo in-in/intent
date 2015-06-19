@@ -1,15 +1,17 @@
 .msg {
+  margin-top: 0;
+
   color: $black-text;
 
   font-family: Liberation Sans Regular;
-  font-size: 14px;
+  font-size: em(14);
 }
 
 .vcard {
   color: $black-text;
 
   font-family: Liberation Sans Regular;
-  font-size: 14px;
+  font-size: em(14);
 }
 
 .vcard-company {
@@ -43,62 +45,98 @@
 }
 
 .contact-form {
+  float: right;
+
   box-sizing: border-box;
+  width: em(592);
 }
 
 .contact-form input:not([type='submit']) {
   box-sizing: border-box;
-  width: 288px;
-  height: 33px;
+  width: em(288);
+  height: em(33);
   margin: 0;
-  margin-right: 16px;
-  padding-top: 10px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  padding-left: 15px;
+  margin-right: em(11);
+  margin-bottom: em(17);
+  padding-top: em(10);
+  padding-right: em(15);
+  padding-bottom: em(10);
+  padding-left: em(15);
 
-  border: none;
-  outline: 1px solid black;
+  border: 1px solid $black-text;
+  outline: none;
+}
+
+.contact-form input:focus:not([type='submit']),
+.contact-form textarea:focus {
+  border: 1px solid $red;
+  outline: none;
 }
 
 .contact-form input:nth-child(2n):not([type='submit']) {
   margin-right: 0;
-
-  background-color: palegreen;
 }
 
 .contact-form input[type='submit'] {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: .667em;
+  padding-right: .833em;
+  padding-bottom: .583em;
+  padding-left: .833em;
 
+  text-align: center;
   text-transform: uppercase;
 
   color: #fff;
   border: none;
+  outline: none;
   background: none;
   background-color: $red;
+
+  font-family: Liberation Sans Bold;
+  font-size: em(12);
+
+  &:hover {
+    background-color: darken($red, 5%);
+  }
+
+  &:active {
+    background-color: darken($red, 8%);
+  }
 }
 
 .contact-form textarea {
+  display: block;
+  overflow-y: hidden;
+
   box-sizing: border-box;
-  width: 592px;
-  height: 204px;
+  width: 100%;
+  height: em(204);
   margin: 0;
+  margin-bottom: em(15);
   padding: 0;
-  padding-top: 10px;
-  padding-left: 15px;
+  padding-top: em(10);
+  padding-right: em(15);
+  padding-bottom: em(10);
+  padding-left: em(15);
 
   resize: none;
 
-  border: none;
-  outline: 1px solid black;
+  border: 1px solid black;
+  outline: none;
 }
 
 input::placeholder,
 textarea::placeholder {
   color: $black-text;
 
-  font-family: Liberation Sans Bold;
-  font-size: 14px;
+  font-family: Liberation Sans Regular;
+  font-size: em(14);
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: $red;
 }

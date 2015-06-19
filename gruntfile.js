@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     autoprefixer: {
       dev: {
         options: {
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     jade: {
       dev: {
         options: {
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
     concat: {
       dev: {
         options: {
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         dest: 'src/js/main.js'
       }
     },
-    
+
     browserSync: {
       default_options: {
         bsFiles: {
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
       }
     },
 
-//SVG
+// SVG
 
     svgmin: {
       options: {
@@ -113,7 +113,7 @@ module.exports = function (grunt) {
         ]
       }
     },
-    
+
     svgstore: {
       options: {
         cleanup: ['fill', 'stroke'],
@@ -131,7 +131,7 @@ module.exports = function (grunt) {
       }
     },
 
-    //    CSSCOMB
+// CSSCOMB
 
     csscomb: {
       dev: {
@@ -151,9 +151,9 @@ module.exports = function (grunt) {
         }]
       }
     },
-    
+
 // UNCSS
-    
+
     uncss: {
       dist: {
         options: {
@@ -165,8 +165,8 @@ module.exports = function (grunt) {
       }
     },
 
-//WATCH
-    
+// WATCH
+
     watch: {
       sass: {
         files: "src/scss/**/*.scss",
@@ -188,7 +188,6 @@ module.exports = function (grunt) {
 
 // BUILD TASKS
 
-
     clean: {
       build: {
         src: ["build"]
@@ -197,7 +196,7 @@ module.exports = function (grunt) {
         src: ["src/img/svgmin"]
       }
     },
-    
+
     copy: {
       build: {
         files: [
@@ -209,14 +208,14 @@ module.exports = function (grunt) {
               '!**/js/dev/**',
               '!**/scss/**',
               '!**/jade/**',
-              '!**/svg*/**' //note: работает как я думал
+              '!**/svg*/**'
             ],
             dest: 'build/'
           }
         ]
       }
     },
-    
+
     cssmin: {
       build: {
         files: {
@@ -224,7 +223,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     htmlmin: {
       build: {
         options: {
@@ -240,25 +239,25 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     uglify: {
       build: {
         files: {'build/js/main.js': 'build/js/main.js'}
       }
     },
-    
+
     imagemin: {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'src/img/**', //note: папку pic она заглядывает
+          cwd: 'src/img/',
           src: ['**/*.{png,jpg,gif}'],
           dest: 'build/img/'
         }]
       }
     },
-    
-//PUBLISH ON GITHUB PAGES
+
+// PUBLISH ON GITHUB PAGES
 
     'gh-pages': {
       options: {

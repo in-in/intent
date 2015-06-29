@@ -1,1 +1,10 @@
-/* mixin */
+// @include respond-to(small)
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+}

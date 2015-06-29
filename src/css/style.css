@@ -1,4 +1,3 @@
-/* mixin */
 /* ========================================================================== */
 /*                                                                            */
 /*                             BASE
@@ -363,7 +362,6 @@ ol {
   margin: 0;
   padding: 0; }
 
-/* mixin */
 /* ========================================================================== */
 /*                                                                            */
 /*                             FONT
@@ -1117,7 +1115,8 @@ body {
   .social-icons a .icon:hover {
     fill: #ea5a4b; }
 
-.logo {
+a.logo {
+  text-decoration: none;
   font-family: Bitter Regular;
   font-size: 1.5em; }
 
@@ -1757,29 +1756,29 @@ a[href^='https://maps.google.com/maps'] {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #252525;
   opacity: 1;
+  color: #252525;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #252525;
   opacity: 1;
+  color: #252525;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #252525;
   opacity: 1;
+  color: #252525;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 
 input::placeholder,
 textarea::placeholder {
-  color: #252525;
   opacity: 1;
+  color: #252525;
   font-family: Liberation Sans Regular;
   font-size: 0.875em; }
 

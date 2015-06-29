@@ -130,8 +130,8 @@
 
 input::placeholder,
 textarea::placeholder {
-  color: $black-text;
   opacity: 1;
+  color: $black-text;
 
   font-family: Liberation Sans Regular;
   font-size: em(14);

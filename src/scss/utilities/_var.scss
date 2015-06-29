@@ -5,3 +5,14 @@ $browser-context: 16;
 $red: #ea5a4b;
 $black-text: #252525;
 $footer-gray: #adadad;
+$breakpoints: (
+  'small'    : 20em,
+  'small-2'  : 30em,
+  'medium'   : 48em,
+  'large'    : 62em
+) !default;
+
+// 320px/20em
+// 480px/30em
+// 768px/48em
+// 992px/62em

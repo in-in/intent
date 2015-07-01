@@ -1,3 +1,17 @@
+mixin slide(path,text1,text2,text3)
+    .slide
+        img(data-lazy='img/pic/'+path, alt="slide")
+        .slide-wrap
+            .container
+                .row
+                    .col-xs-5
+                        h2.slide-text
+                            span=text1
+                        h2.slide-text
+                            span=text2
+                        h2.slide-text
+                            span=text3
+
 #slider-container
     .slider
         +slide(

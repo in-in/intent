@@ -25,10 +25,9 @@ a.logo {
 
   color: $black-text;
 
-  direction: rtl;
-  unicode-bidi: bidi-override; //horrible hack from stackoverflow
+  &::after {
+    content: '.';
 
-  &::first-letter {
     color: $red;
   }
 }

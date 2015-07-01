@@ -1,11 +1,10 @@
 @import 'slick';
-//@import 'slick-theme';
 
 #slider-container {
   position: relative;
 }
 
-.slider {
+.slide {
   overflow: hidden;
 
   max-height: 450px;

@@ -52,11 +52,14 @@
 }
 
 .contact-form input:not([type='submit']) {
+  display: block;
+  float: left;
+
   box-sizing: border-box;
   width: 20.572em;
   height: 2.358em;
   margin: 0;
-  margin-right: 12px;
+  margin-right: 1.143em;
   margin-bottom: 1.214em;
   padding-right: 1.0714em;
   padding-left: 1.0714em;
